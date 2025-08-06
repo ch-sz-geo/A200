@@ -2,7 +2,7 @@
 ifdef::env-github[]
 [discrete]
 = Themenverwaltung (A200)
-Sie befinden sich auf der Startseite des Themas **"Themenverwaltung (A200)"**. Über folgende Links gelangen Sie zu weiteren Informationen:
+Sie befinden sich auf der Startseite des Themas **"Themenverwaltung (A200)"**. Über folgenden Link gelangen Sie zu weiteren Informationen:
 
 * https://ch-sz-geo.github.io/A200/[Daten, Datenmodell, Modellbeschreibung, Erfassungsrichtlinie usw.] zu diesem Thema
 endif::[]
