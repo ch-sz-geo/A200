@@ -4,38 +4,11 @@ Das Topic `+Stammdaten+` umfasst alle statischen Werte. Darunter fallen z.B. die
 
 Die Stammdaten werden durch die zuständige Stelle vorgegeben. Bei Bundesthemen ist dies das für die Modellierung zuständige Bundesamt. Bei kantonalen Themen das zuständige kantonale Amt. Die Stammdaten von Bundesthemen können auf der Stufe Kanton erweitert werden. Die kantonalen Erweiterungen werden bei der Überführung ins Bundesmodell den entsprechenden Bundestypen zugeordnet.
 
-Die Stammdaten werden durch die zuständige Stelle vorgegeben, bei Bedarf durch die Abteilung Geoinformation nachgeführt und im https://github.com/ch-sz-geo/A000_template/tree/main/data[data-Verzeichnis] des jeweiligen Themas veröffentlicht.
+Die Stammdaten werden durch die zuständige Stelle vorgegeben, bei Bedarf durch die Abteilung Geoinformation nachgeführt und im https://github.com/ch-sz-geo/A200/tree/main/data[data-Verzeichnis] des jeweiligen Themas veröffentlicht.
 
 ==== Klasse `+Katalogeintrag+`
 Die Klasse `+Katalogeintrag+` enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte `+Katalogeintrag+`, sondern nur Objekte von den spezialisierten Klassen.
 
-Spaltenbreite Variante 1:
-[cols="10%, 60%, 20%, 10%",options="header"]
-|===
-| Name | Beschreibung | Beispiel | Freigabe
-m| OID
-| technischer Objektidentifikator
-| ceaa37a9-8614-43fc-9a8b-688f95c30218
-| öffentlich
-m| Code
-| Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe https://www.interlis.ch/dokumentation[INTERLIS-Referenzhandbuch])
-| in_Aenderung
-| öffentlich
-m| Name
-| Bezeichnung des Katalogeintrages, wie er den Nutzenden angezeigt wird
-| in Änderung
-| öffentlich
-m| SortierNr
-| Reihenfolge des Katalogeintrages in der Auswahlliste
-| 1
-| öffentlich
-m| Bemerkung
-| Erläuterung, welche den Katalogeintrag näher beschreibt
-| Dieser Status wird für alle Objekte verwendet, bei denen aktuell eine Nachführung läuft.
-| öffentlich
-|===
-
-Spaltenbreite Variante 2:
 [cols=4*,options="header"]
 |===
 | Name | Beschreibung | Beispiel | Freigabe
@@ -61,8 +34,8 @@ m| Bemerkung
 | öffentlich
 |===
 
-==== Klasse `+Standard-Katalogeintrag+`
-Die Verbindlichkeit kam mit der Aufnahme der statischen Waldgrenzen in den ÖREB-Kataster. Sie ist eine Spezialisierung der Klasse `+Katalogeintrag+`.
+==== Klasse `+Erfassungssystem+`
+Dieser Katalog enthält die Namen der verschiedenen Erfassungssysteme. Die Vorgabe dieser Werte über einen Katalog wird für eine stabile Prozessierung benötigt. Die Klasse ist eine Spezialisierung der Klasse `+Katalogeintrag+`.
 
 [cols=4*,options="header"]
 |===
@@ -75,97 +48,53 @@ m|Name
 3+| Die Werte müssen eindeutig sein
 |===
 
-==== Klasse `+separate Stammdaten+`
-Über den Typ wird die Art der Geometrie festgelegt.
+==== todo Klasse `+Prozessbezeichnung+`
+Dieser Katalog enthält die Namen der verschiedenen Prozessbezeichnungen. Die Klasse ist eine Spezialisierung der Klasse `+Katalogeintrag+`.
 
-In der Klasse `+Typ+` wurde anfänglich auch der Typ des Wirkbereiches aufgeführt. Weil ein Wirkbereich jedoch stets gleich symbolisiert wird, wurde entschieden, auf diesen Eintrag zu verzichtet.
 [cols=4*,options="header"]
 |===
 | Name | Beschreibung | Beispiel | Freigabe
-m| OID
-| technischer Objektidentifikator
-| ceaa37a9-8614-43fc-9a8b-688f95c30218
-| öffentlich
-m| Code
-| Code des Listeneintrages; entspricht in INTERLIS dem Wert der Aufzählung und muss ein gültiger INTERLIS-Name sein (siehe https://www.interlis.ch/dokumentation[INTERLIS-Referenzhandbuch])
-| ausserhalb_Bauzonen_statisch
-| öffentlich
-m| Name
-| Bezeichnung des Katalogeintrages, wie er den Nutzenden angezeigt wird
-| Waldgrenze ausserhalb Bauzone (statisch)
-| öffentlich
-m| Abkuerzung
-| Kurzform des Katalogeintrages
-| WGraB_s
-| öffentlich
-m| SortierNr
-| Reihenfolge des Katalogeintrages in der Auswahlliste
-| 2
-| öffentlich
-m| Bemerkung
-| Erläuterung, welche den Katalogeintrag näher beschreibt
-| Statische Waldgrenze in Gebieten ausserhalb der Bauzonen, in denen der Kanton eine Zunahme des Waldes verhindern will.
-| öffentlich
-m| Symbol
-| Bild des Legendeneintrages; codiert als Base64-Wert
-| iVBORw0KGg... (gekürzt)
-| öffentlich
+4+| _Diese Klasse führt keine zusätzlichen Attribute_
+4+| *Anforderungen*
+m|Code
+3+| Die Werte müssen eindeutig sein
+m|Name
+3+| Die Werte müssen eindeutig sein
 |===
 
+==== Klasse `+Status+`
+Dieser Katalog enthält die Statusinformationen, welche nach einem Prozessschritt ins Log geschrieben wird. Die Klasse ist eine Spezialisierung der Klasse `+Katalogeintrag+`.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| _Diese Klasse führt keine zusätzlichen Attribute_
+4+| *Anforderungen*
+m|Code
+3+| Die Werte müssen eindeutig sein
+m|Name
+3+| Die Werte müssen eindeutig sein
+|===
+
+==== Klasse `+Recht+`
+Dieser Katalog enthält die Rechte, um eine Funktion auszuführen. Mit Hilfe dieser Information wird geprüft, ob ein Benutzer einen Prozess starten darf. Die Klasse ist eine Spezialisierung der Klasse `+Katalogeintrag+`.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| _Diese Klasse führt keine zusätzlichen Attribute_
+4+| *Anforderungen*
+m|Code
+3+| Die Werte müssen eindeutig sein
+m|Name
+3+| Die Werte müssen eindeutig sein
+|===
 
 === Topic `+Fachdaten+`
 Das Topic `+Fachdaten+` umfasst die eigentlichen, fachlichen Klassen des Themas.
 
-==== Klasse `+Klasse1+`
-Die Klasse `+Klasse1+` führt .....
-
-[cols=4*,options="header"]
-|===
-| Name | Beschreibung | Beispiel | Freigabe
-m| OID
-| technischer Objektidentifikator
-| ceaa37a9-8614-43fc-9a8b-688f95c30218
-| öffentlich
-m| erfasstVon
-| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
-| Musterha
-| +++<span style="color:red;">intern</span>+++
-m| erfasstAm
-| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
-| 1980-03-21T15:38:12
-| öffentlich
-m| geaendertVon
-| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
-| Muelleran
-| +++<span style="color:red;">intern</span>+++
-m| geaendertAm
-| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
-| 2024-07-30T08:07:57
-| öffentlich
-m| gueltigVon
-| Datum, an dem das Objekt rechtskräftig wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.
-| 2024-01-01
-| öffentlich
-m| gueltigBis
-| Datum, an dem das Objekt rechtskräftig aufgehoben wurde bzw. wird. Es gilt der Zeitpunkt mittags um 12:00 Uhr. Das Datum kann sowohl in der Vergangenheit wie auch in der Zukunft liegen.
-| 2030-12-31
-| öffentlich
-m| Bemerkung
-| öffentliche Bemerkung zum Objekt
-| Das ist eine öffentliche Bemerkung
-| öffentlich
-m| Bemerkung_intern
-| Erläuterung, welche den Katalogeintrag näher beschreibt
-| Dieser Status wird für alle Objekte verwendet, bei denen aktuell eine Nachführung läuft.
-| +++<span style="color:red;">amtsintern</span>+++
-4+| *Geometrie*
-m| Geometrie
-| Geometrie des Objektes
-| (ohne Beispiel)
-| öffentlich
-|===
-
-Variante mit Fremdschlüssel-, Geometrie- und Bedingungsattributen:
+==== Klasse `+Thema+`
+Die Klasse `+Thema+` ist die zentrale Klasse des Modells und führt die Angaben zu einem Thema.
 
 [cols=4*,options="header"]
 |===
@@ -178,75 +107,663 @@ m| OID
 m| erfasstVon
 | Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
 | Musterha
-| intern
+| +++<span style="color:red;">intern</span>+++
 m| erfasstAm
 | Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
 | 1980-03-21T15:38:12
-| intern
+| öffentlich
 m| geaendertVon
 | Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
 | Muelleran
-| intern
+| +++<span style="color:red;">intern</span>+++
 m| geaendertAm
 | Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
 | 2024-07-30T08:07:57
-| intern
-m| Kennung
-| fortlaufende, einfach aufgebaute Kennung, welche sich zur Identifikation eignet
-| GA1159
 | öffentlich
-m| KennungAlt
-| Nummer aus dem alten geologischen Archiv; entspricht "IDAlternate" aus DM_GeolAssets_V2
-| GA01.2.1461
+m| Nummer
+| vierstellige, eindeutige Nummer des Themas; Aufbau: "A" gefolgt von drei Ziffern
+| A200
 | öffentlich
 m| Titel
-| Titel des Dokuments; entspricht "IDAlternate" aus DM_GeolAssets_V2
-| UVP:GeolGeotecGutachtenzumVorprojekt
+| Bezeichnung des Themas; häufig wird die Bezeichnung vom zugeordneten Datenmodell übernommen
+| Themenverwaltung
 | öffentlich
-m| Erstelldatum
-| Datum des Berichtes; entspricht "DateCreation" aus DM_GeolAssets_V2
-| 1985-03-21
+m| Kurzbeschreibung
+| Beschreibung des Themas
+| Die Themenverwaltung umfasst Information über die in der kantonalen Geodateninfrastruktur gehaltenen Datensätze
 | öffentlich
-m| Dokumentlink
-| Link, über den auf das Dokument zugegrifen werden kann; Pfad zum Speicher- bzw. Ablageort des Dokuments
-| Q:\...\2021-01-18-0303_NB_Standseilbahn_Stoos_Bauproj_KL.pdf
-| öffentlich
-m| Baugesuchsnummer
-| Kennung des Baugesuches, welches mit dem Dokument in Verbindung steht
-| B2019-0421
-| öffentlich
-m| Autor
-| Kennung der Objekt-ID des Unternehmens, welches den Bericht verfasst hat. Auf eine ausmodellierte Beziehung wird der Einfachheit halber verzichtet, so dass hier nur die ID eingetragen werden muss.
-| 2a150ef7-eb3d-4661-99d6-52d6eb7a5fd0
-| öffentlich
-m| Bemerkung
-| Kommentar zum entsprechenden Dokument; entspricht "Description" aus DM_GeolAssets_V2
-| Das ist meine Bemerkung zu diesem Dokument.
-| öffentlich
-4+| *Beziehungsattribute*
-m| rGeometrie
-| Fremdschlüssel zur Geometrie, welche mit dem Dokument verknüpft ist.
+4+| todo *Beziehungsattribute*
+m| todo
+| todo
 | ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
 | öffentlich
-m| rInhalt
-| Fremdschlüssel zum Inhalt (Stammdaten); entspricht "Kind" aus DM_GeolAssets_V2
-| e0807260-956b-40a2-871a-e32c51ebf192 (für "Bohrprofil")
-| öffentlich
-4+| *Geometrie*
+4+| todo *Geometrie*
 m| Geometrie
 | Geometrie des Objektes
 | (ohne Beispiel)
 | öffentlich
 4+| *Bedingungen*
-m|Kennung
+m|Nummer
 3+a| * Die Werte müssen innerhalb der Klasse eindeutig sein.
 * Nach der Vergabe muss der Wert unverändert bleiben.
+* Der tiefste Wert ist "A000". Danach werden die Nummern bis "A999" vergeben. Anschliessend geht es weiter mit "B000".
 |===
 
-[%header, cols="10%, 10%, 10%, 60%, 10%", format=csv, separator=;]
-|=======
-include::../table/klasse_katalogeintrag.csv[]
-|=======
+==== Klasse `+Datenmodell+`
+Die Klasse `+Datenmodell+` führt die Angaben zum Datenmodell. Das Datenmodell wird einem Thema zugeordnet und kann über die Zeit in verschiedenen Versionen vorliegen.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| +++<span style="color:red;">intern</span>+++
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| öffentlich
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| +++<span style="color:red;">intern</span>+++
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| öffentlich
+m| Name
+| Name des Datenmodells gemäss INTELIS-Datei.
+| SZ_Themenverwaltung_V2
+| öffentlich
+m| Modellversion
+| Version des Datenmodells gemäss "VERSION" im Datenmodell.
+| 2022-08-12
+| öffentlich
+m| Themenversion
+| Version des Themas. Bei Änderungen, welche Auswirkungen auf Nutzerinnen und Nutzer haben, wird die Themenversion aktualisiert. Die Versionskennung erfolgt anhand der Buchstaben a, b und c. Nach c wird die Version wieder auf a gesetzt. Gleichzeitig sind maximal zwei Themenversionen gültig: die eine, welche abgelöst wird und die andere, welche neu gilt. Diese zeitliche Überlappung dient der Anpassung der abhängigen Drittsysteme.
+| a
+| öffentlich
+m| gueltigVon
+| Datum, ab wann die Themenversion gültig wurde. Es gilt jeweils der Zeitpunkt mittags um 12:00 Uhr. Aus diesem Grund darf `+gueltigVon+` mit `+gueltigBis+` übereinstimmen.
+| 2018-07-12
+| öffentlich
+m| gueltigBis
+| Datum, bis wann die Themenversion gültig war. Bei der aktiven Themenversion ist der Wert leer. Es gilt jeweils der Zeitpunkt mittags um 12:00 Uhr.
+| 2025-03-03
+| öffentlich
+m| Link
+| URL, über die man auf das Datenmodell gelangt.
+| https://models.geo.sz.ch/AGI/SZ_Themenverwaltung_V1_2.ili
+| öffentlich
+m| Dokumentation
+| URL, über die man auf die Modelldokumentation gelangt.
+| https://ch-sz-geo.github.io/A200/docs/modelldokumentation.html
+| öffentlich
+4+| todo *Beziehungsattribute*
+m| todo
+| todo
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| öffentlich
+4+| todo *Geometrie*
+m| Geometrie
+| Geometrie des Objektes
+| (ohne Beispiel)
+| öffentlich
+|===
+
+==== Klasse `+Dokument+`
+Die Klasse `+Dokument+` führt die Angaben zu einem Dokument.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| *Fachattribute*
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| +++<span style="color:red;">intern</span>+++
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| öffentlich
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| +++<span style="color:red;">intern</span>+++
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| intern
+m| Titel
+| Dokumentname
+| Objektkatalog
+| öffentlich
+m| Dokument
+| URL, über die man auf das Dokumentation gelangt.
+| https://www.zumDokument.doc
+| öffentlich
+4+| todo *Beziehungsattribute*
+m| todo
+| todo
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| öffentlich
+4+| todo *Geometrie*
+m| Geometrie
+| Geometrie des Objektes
+| (ohne Beispiel)
+| öffentlich
+4+| todo *Bedingungen*
+m|Nummer
+3+a| * Die Werte müssen innerhalb der Klasse eindeutig sein.
+* Nach der Vergabe muss der Wert unverändert bleiben.
+* Der tiefste Wert ist "A000". Danach werden die Nummern bis "A999" vergeben. Anschliessend geht es weiter mit "B000".
+|===
+
+==== Klasse `+Themenereignis+`
+Die Klasse `+Themenereignis+` führt die Ereignisse, welche in Zusammenhang mt dem Thema stehen. Alle Angaben dienen der Historie eines Themas und sind intern.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| *Fachattribute*
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| +++<span style="color:red;">intern</span>+++
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| +++<span style="color:red;">intern</span>+++
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| +++<span style="color:red;">intern</span>+++
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| +++<span style="color:red;">intern</span>+++
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| +++<span style="color:red;">intern</span>+++
+m| Datum
+| Angabe des Datums, an dem das Ereignis stattfand.
+| 2025-06-01
+| +++<span style="color:red;">intern</span>+++
+m| Titel
+| Titel, welcher das Ereignis beschreibt.
+| Erstfassung
+| +++<span style="color:red;">intern</span>+++
+m| Beschrieb
+| Erläuterung des Ereignisses
+| Modelldokumentation publiziert
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Beziehungsattribute*
+m| todo
+| todo
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Geometrie*
+m| Geometrie
+| Geometrie des Objektes
+| (ohne Beispiel)
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Bedingungen*
+m|Nummer
+3+a| * Die Werte müssen innerhalb der Klasse eindeutig sein.
+* Nach der Vergabe muss der Wert unverändert bleiben.
+* Der tiefste Wert ist "A000". Danach werden die Nummern bis "A999" vergeben. Anschliessend geht es weiter mit "B000".
+|===
+
+==== Klasse `+Geobasisdatensatz+`
+Die Klasse `+Geobasisdatensatz+` erstellt einen Bezug zu Geobasisdaten.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| *Fachattribute*
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| +++<span style="color:red;">intern</span>+++
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| öffentlich
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| +++<span style="color:red;">intern</span>+++
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| öffentlich
+m| Stammnummer
+| ID des Geobasisdatensatzes gemäss Anhang der Rechtserlasse von Bund oder dem Kanton.
+| 131
+| öffentlich
+m| Zusatzzahl
+| Zahl, welche zur Unterteilung des Geobasisdatensatzes deint.
+| 3
+| öffentlich
+m| Suffix
+| Suffix, welcher bei kantonalen Geobasisdatensätzen zur Anwendung kommt.
+| SZ
+| öffentlich
+4+| todo *Beziehungsattribute*
+m| todo
+| todo
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| öffentlich
+4+| todo *Geometrie*
+m| Geometrie
+| Geometrie des Objektes
+| (ohne Beispiel)
+| öffentlich
+4+| todo *Bedingungen*
+m|Nummer
+3+a| * Die Kombination aus `+Stammnummer+`, `+Zusatzzahl+` und `+Suffix+` muss eindeutig sein.
+|===
+
+==== Klasse `+Information+`
+Die Klasse `+Information+` ermöglicht es, einem Thema zusätzliche Angaben hinzuzufügen. Alle Angaben dienen der Doumentation eines Themas und sind intern.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| *Fachattribute*
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| +++<span style="color:red;">intern</span>+++
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| +++<span style="color:red;">intern</span>+++
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| +++<span style="color:red;">intern</span>+++
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| +++<span style="color:red;">intern</span>+++
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| +++<span style="color:red;">intern</span>+++
+m| Titel
+| Überschrift der Information
+| Thema aufgehoben
+| +++<span style="color:red;">intern</span>+++
+m| Text
+| Erläuterung der Information
+| Das Thema wurde durch den Bund aufgehoben.
+| +++<span style="color:red;">intern</span>+++
+m| Link
+| URL auf zusätzliche Informationen
+| https://www.zustz.info
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Beziehungsattribute*
+m| todo
+| todo
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Geometrie*
+m| Geometrie
+| Geometrie des Objektes
+| (ohne Beispiel)
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Bedingungen*
+m|Nummer
+3+a| * Die Kombination aus `+Stammnummer+`, `+Zusatzzahl+` und `+Suffix+` muss eindeutig sein.
+|===
+
+==== Klasse `+Stelle+`
+Die Klasse `+Stelle+` führt die Angaben über die für ein Thema zuständigen Stelle.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| *Fachattribute*
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| +++<span style="color:red;">intern</span>+++
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| öffentlich
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| +++<span style="color:red;">intern</span>+++
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| öffentlich
+m| Name
+| Name der zuständigen Stelle
+| Amt für Umwelt und Energie
+| öffentlich
+m| Abkuerzung
+| Kurzform von `+Name+`
+| AfU
+| öffentlich
+4+| todo *Beziehungsattribute*
+m| todo
+| todo
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Geometrie*
+m| Geometrie
+| Geometrie des Objektes
+| (ohne Beispiel)
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Bedingungen*
+m|Nummer
+3+a| * Die Kombination aus `+Stammnummer+`, `+Zusatzzahl+` und `+Suffix+` muss eindeutig sein.
+|===
+
+==== Klasse `+Parameter+`
+Die Klasse `+Parameter+` führt die Information, welche für die Prozessierung benötigt werden. Alle Angaben sind intern.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| *Fachattribute*
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| +++<span style="color:red;">intern</span>+++
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| +++<span style="color:red;">intern</span>+++
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| +++<span style="color:red;">intern</span>+++
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| +++<span style="color:red;">intern</span>+++
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| +++<span style="color:red;">intern</span>+++
+m| Name
+| Name des Parameters
+| Datenmodell
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Beziehungsattribute*
+m| todo
+| todo
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Geometrie*
+m| Geometrie
+| Geometrie des Objektes
+| (ohne Beispiel)
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Bedingungen*
+m|Nummer
+3+a| * Die Kombination aus `+Stammnummer+`, `+Zusatzzahl+` und `+Suffix+` muss eindeutig sein.
+|===
+
+==== Klasse `+Wert+`
+Die Klasse `+Wert+` führt die Werte der Parameter. Sie steuern die Prozessierung. Alle Angaben sind intern.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| *Fachattribute*
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| +++<span style="color:red;">intern</span>+++
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| +++<span style="color:red;">intern</span>+++
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| +++<span style="color:red;">intern</span>+++
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| +++<span style="color:red;">intern</span>+++
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| +++<span style="color:red;">intern</span>+++
+m| Text
+| Wert des Parameters
+| A201a
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Beziehungsattribute*
+m| todo
+| todo
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Geometrie*
+m| Geometrie
+| Geometrie des Objektes
+| (ohne Beispiel)
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Bedingungen*
+m|Nummer
+3+a| * Die Kombination aus `+Stammnummer+`, `+Zusatzzahl+` und `+Suffix+` muss eindeutig sein.
+|===
+
+==== Klasse `+Prozess+`
+Die Klasse `+Prozess+` enthält die Information über einen Prozess. Alle Angaben sind intern.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| *Fachattribute*
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| +++<span style="color:red;">intern</span>+++
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| +++<span style="color:red;">intern</span>+++
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| +++<span style="color:red;">intern</span>+++
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| +++<span style="color:red;">intern</span>+++
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| +++<span style="color:red;">intern</span>+++
+m| Name
+| Name des Prozeses
+| Datenexport Produktion
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Beziehungsattribute*
+m| todo
+| todo
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Geometrie*
+m| Geometrie
+| Geometrie des Objektes
+| (ohne Beispiel)
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Bedingungen*
+m|Nummer
+3+a| * Die Kombination aus `+Stammnummer+`, `+Zusatzzahl+` und `+Suffix+` muss eindeutig sein.
+|===
+
+==== Klasse `+Werkzeug+`
+Die Klasse `+Werkzeug+` enthält die Information über die eingesetzten Werkzeuge. Alle Angaben sind intern.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| *Fachattribute*
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| +++<span style="color:red;">intern</span>+++
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| +++<span style="color:red;">intern</span>+++
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| +++<span style="color:red;">intern</span>+++
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| +++<span style="color:red;">intern</span>+++
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| +++<span style="color:red;">intern</span>+++
+m| Bezeichnung
+| Bezeichnung des Werkzeuges
+| ili2pg_export
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Beziehungsattribute*
+m| todo
+| todo
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Geometrie*
+m| Geometrie
+| Geometrie des Objektes
+| (ohne Beispiel)
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Bedingungen*
+m|Kennung
+3+a| * Der Wert muss mit 'user_full_name' von QGIS übereinstimmen.
+|===
+
+==== Klasse `+Benutzer+`
+Die Klasse `+Benutzer+` führt die Informationen der Benutzer, welche Prozesse ausführen können. Die Angaben werden benötigt, um Daten aus QGIS im WebGIS aktualisieren zu können. Alle Angaben dienen der Doumentation eines Themas und sind intern.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| *Fachattribute*
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| +++<span style="color:red;">intern</span>+++
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| +++<span style="color:red;">intern</span>+++
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| +++<span style="color:red;">intern</span>+++
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| +++<span style="color:red;">intern</span>+++
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| +++<span style="color:red;">intern</span>+++
+m| Kennung
+| eindeutige Kennung des Benutzers; weitere Hinweise siehe unten
+| Anna Muster
+| +++<span style="color:red;">intern</span>+++
+m| E_Mail
+| E-Mail-Adresse des Benutzers, damit dieser automatisch benachrichtigt werden kann.
+| anna.muster@domain.com
+| +++<span style="color:red;">intern</span>+++
+m| ist_aktiv
+| Flag, über das gesteuert wird, ob ein Benutzer Prozesse ausführen kann oder nicht.
+| true
+| +++<span style="color:red;">intern</span>+++
+m| Bemerkung
+| Zusatzinformationen zum Benutzer
+| 2025-08-25: Benutzer erstellt und berechtigt
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Beziehungsattribute*
+m| todo
+| todo
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Geometrie*
+m| Geometrie
+| Geometrie des Objektes
+| (ohne Beispiel)
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Bedingungen*
+m|Kennung
+3+a| * Der Wert muss mit 'user_full_name' von QGIS übereinstimmen.
+|===
+
+==== Klasse `+Prozesslog+`
+Die Klasse `+Prozesslog+` führt die Informationen zu den Prozessen. Alle Angaben dienen der Doumentation eines Themas und sind intern.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| *Fachattribute*
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| +++<span style="color:red;">intern</span>+++
+m| angestossenVon
+| Name der Person, welche den Prozess angestossen hat.
+| Anna Muster
+| +++<span style="color:red;">intern</span>+++
+m| Themennummer
+| Nummer des Themas, für welches der Prozess gestartet wurde.
+| A123
+| +++<span style="color:red;">intern</span>+++
+m| Ausfuehrungszeitpunkt
+| Zeitstempel, an dem der Prozess gestartet wurde.
+| 2024-07-30T08:07:57
+| +++<span style="color:red;">intern</span>+++
+m| Befehl
+| Befehl, mit dem der Prozess angestossen wurde.
+| <keine Angabe>
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Beziehungsattribute*
+m| todo
+| todo
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Geometrie*
+m| Geometrie
+| Geometrie des Objektes
+| (ohne Beispiel)
+| +++<span style="color:red;">intern</span>+++
+4+| todo *Bedingungen*
+m|Kennung
+3+a| * Der Wert muss mit 'user_full_name' von QGIS übereinstimmen.
+|===
 
 ifdef::backend-pdf[]
 <<<
