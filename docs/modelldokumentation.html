@@ -205,15 +205,15 @@ th {
 <li><a href="#_klassendiagramm">3.2. Klassendiagramm</a></li>
 </ul>
 </li>
-<li><a href="#_todo_klassenbeschreibung">4. todo: Klassenbeschreibung</a>
+<li><a href="#_klassenbeschreibung">4. Klassenbeschreibung</a>
 <ul class="sectlevel2">
 <li><a href="#_topic_stammdaten">4.1. Topic <code>Stammdaten</code></a>
 <ul class="sectlevel3">
 <li><a href="#_klasse_katalogeintrag">4.1.1. Klasse <code>Katalogeintrag</code></a></li>
-<li><a href="#_klasse_erfassungssystem">4.1.2. Klasse <code>Erfassungssystem</code></a></li>
-<li><a href="#_todo_klasse_prozessbezeichnung">4.1.3. todo Klasse <code>Prozessbezeichnung</code></a></li>
+<li><a href="#_klasse_prozess">4.1.2. Klasse <code>Prozess</code></a></li>
+<li><a href="#_klasse_parameter">4.1.3. Klasse <code>Parameter</code></a></li>
 <li><a href="#_klasse_status">4.1.4. Klasse <code>Status</code></a></li>
-<li><a href="#_klasse_recht">4.1.5. Klasse <code>Recht</code></a></li>
+<li><a href="#_klasse_zugangsberechtigung">4.1.5. Klasse <code>Zugangsberechtigung</code></a></li>
 </ul>
 </li>
 <li><a href="#_topic_fachdaten">4.2. Topic <code>Fachdaten</code></a>
@@ -221,16 +221,13 @@ th {
 <li><a href="#_klasse_thema">4.2.1. Klasse <code>Thema</code></a></li>
 <li><a href="#_klasse_datenmodell">4.2.2. Klasse <code>Datenmodell</code></a></li>
 <li><a href="#_klasse_dokument">4.2.3. Klasse <code>Dokument</code></a></li>
-<li><a href="#_klasse_themenereignis">4.2.4. Klasse <code>Themenereignis</code></a></li>
+<li><a href="#_klasse_ereignis">4.2.4. Klasse <code>Ereignis</code></a></li>
 <li><a href="#_klasse_geobasisdatensatz">4.2.5. Klasse <code>Geobasisdatensatz</code></a></li>
-<li><a href="#_klasse_information">4.2.6. Klasse <code>Information</code></a></li>
-<li><a href="#_klasse_stelle">4.2.7. Klasse <code>Stelle</code></a></li>
-<li><a href="#_klasse_parameter">4.2.8. Klasse <code>Parameter</code></a></li>
-<li><a href="#_klasse_wert">4.2.9. Klasse <code>Wert</code></a></li>
-<li><a href="#_klasse_prozess">4.2.10. Klasse <code>Prozess</code></a></li>
-<li><a href="#_klasse_werkzeug">4.2.11. Klasse <code>Werkzeug</code></a></li>
-<li><a href="#_klasse_benutzer">4.2.12. Klasse <code>Benutzer</code></a></li>
-<li><a href="#_klasse_prozesslog">4.2.13. Klasse <code>Prozesslog</code></a></li>
+<li><a href="#_klasse_organisation">4.2.6. Klasse <code>Organisation</code></a></li>
+<li><a href="#_klasse_benutzer">4.2.7. Klasse <code>Benutzer</code></a></li>
+<li><a href="#_klasse_thema_benutzer">4.2.8. Klasse <code>Thema__Benutzer</code></a></li>
+<li><a href="#_klasse_prozessparameter">4.2.9. Klasse <code>Prozessparameter</code></a></li>
+<li><a href="#_klasse_prozesslog">4.2.10. Klasse <code>Prozesslog</code></a></li>
 </ul>
 </li>
 </ul>
@@ -270,7 +267,7 @@ th {
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">letzte Änderung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2025-08-08</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2025-08-21</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Themen-Nummer</p></td>
@@ -441,7 +438,7 @@ th {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_todo_klassenbeschreibung"><a class="anchor" href="#_todo_klassenbeschreibung"></a><a class="link" href="#_todo_klassenbeschreibung">4. todo: Klassenbeschreibung</a></h2>
+<h2 id="_klassenbeschreibung"><a class="anchor" href="#_klassenbeschreibung"></a><a class="link" href="#_klassenbeschreibung">4. Klassenbeschreibung</a></h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_topic_stammdaten"><a class="anchor" href="#_topic_stammdaten"></a><a class="link" href="#_topic_stammdaten">4.1. Topic <code>Stammdaten</code></a></h3>
@@ -452,7 +449,7 @@ th {
 <p>Die Stammdaten werden durch die zuständige Stelle vorgegeben. Bei Bundesthemen ist dies das für die Modellierung zuständige Bundesamt. Bei kantonalen Themen das zuständige kantonale Amt. Die Stammdaten von Bundesthemen können auf der Stufe Kanton erweitert werden. Die kantonalen Erweiterungen werden bei der Überführung ins Bundesmodell den entsprechenden Bundestypen zugeordnet.</p>
 </div>
 <div class="paragraph">
-<p>Die Stammdaten werden durch die zuständige Stelle vorgegeben, bei Bedarf durch die Abteilung Geoinformation nachgeführt und im <a href="https://github.com/ch-sz-geo/A200/tree/main/data">data-Verzeichnis</a> des jeweiligen Themas veröffentlicht.</p>
+<p>Die Stammdaten werden durch die zuständige Stelle vorgegeben, bei Bedarf durch die Abteilung Geoinformation nachgeführt und im [todo] <a href="https://github.com/ch-sz-geo/A200/tree/main/data">data-Verzeichnis</a> des jeweiligen Themas veröffentlicht.</p>
 </div>
 <div class="sect3">
 <h4 id="_klasse_katalogeintrag"><a class="anchor" href="#_klasse_katalogeintrag"></a><a class="link" href="#_klasse_katalogeintrag">4.1.1. Klasse <code>Katalogeintrag</code></a></h4>
@@ -509,9 +506,9 @@ th {
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_erfassungssystem"><a class="anchor" href="#_klasse_erfassungssystem"></a><a class="link" href="#_klasse_erfassungssystem">4.1.2. Klasse <code>Erfassungssystem</code></a></h4>
+<h4 id="_klasse_prozess"><a class="anchor" href="#_klasse_prozess"></a><a class="link" href="#_klasse_prozess">4.1.2. Klasse <code>Prozess</code></a></h4>
 <div class="paragraph">
-<p>Dieser Katalog enthält die Namen der verschiedenen Erfassungssysteme. Die Vorgabe dieser Werte über einen Katalog wird für eine stabile Prozessierung benötigt. Die Klasse ist eine Spezialisierung der Klasse <code>Katalogeintrag</code>.</p>
+<p>Dieser Katalog enthält die Namen der verschiedenen Prozesse, welche bei der Automatisierung zur Anwendung kommen. Unter 'Automatisierung' werden all jene Abläufe verstanden, welche ohne manuellen Anstoss ablaufen. Zum aktuellen Zeitpunkt sind es ausschliesslich Jobs, welche über FME-Flow angestossen werden. Die die Prozesse einheitlich bezeichnet und ihre Namen konstant gehalten werden können, werden sie als Katalog geführt. Die Klasse ist eine Spezialisierung der Klasse <code>Katalogeintrag</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -547,9 +544,9 @@ th {
 </table>
 </div>
 <div class="sect3">
-<h4 id="_todo_klasse_prozessbezeichnung"><a class="anchor" href="#_todo_klasse_prozessbezeichnung"></a><a class="link" href="#_todo_klasse_prozessbezeichnung">4.1.3. todo Klasse <code>Prozessbezeichnung</code></a></h4>
+<h4 id="_klasse_parameter"><a class="anchor" href="#_klasse_parameter"></a><a class="link" href="#_klasse_parameter">4.1.3. Klasse <code>Parameter</code></a></h4>
 <div class="paragraph">
-<p>Dieser Katalog enthält die Namen der verschiedenen Prozessbezeichnungen. Die Klasse ist eine Spezialisierung der Klasse <code>Katalogeintrag</code>.</p>
+<p>Dieser Katalog enthält die Parameter, welche für die Ausführung der Prozesse benötigt werden. Wie die Namen der Prozesse, ist eine einheitliche Vorgabe der Parameter für das korrekte Funktionieren Abläufe entschiedend, weshalb die Werte als Katalog zur Verfügung gestellt werden. Die Klasse ist eine Spezialisierung der Klasse <code>Katalogeintrag</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -587,7 +584,7 @@ th {
 <div class="sect3">
 <h4 id="_klasse_status"><a class="anchor" href="#_klasse_status"></a><a class="link" href="#_klasse_status">4.1.4. Klasse <code>Status</code></a></h4>
 <div class="paragraph">
-<p>Dieser Katalog enthält die Statusinformationen, welche nach einem Prozessschritt ins Log geschrieben wird. Die Klasse ist eine Spezialisierung der Klasse <code>Katalogeintrag</code>.</p>
+<p>Dieser Katalog enthält die Statusinformationen eines Themas und zeigt an, ob ein Thema aktiv oder inaktiv ist. Die Klasse ist eine Spezialisierung der Klasse <code>Katalogeintrag</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -623,9 +620,9 @@ th {
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_recht"><a class="anchor" href="#_klasse_recht"></a><a class="link" href="#_klasse_recht">4.1.5. Klasse <code>Recht</code></a></h4>
+<h4 id="_klasse_zugangsberechtigung"><a class="anchor" href="#_klasse_zugangsberechtigung"></a><a class="link" href="#_klasse_zugangsberechtigung">4.1.5. Klasse <code>Zugangsberechtigung</code></a></h4>
 <div class="paragraph">
-<p>Dieser Katalog enthält die Rechte, um eine Funktion auszuführen. Mit Hilfe dieser Information wird geprüft, ob ein Benutzer einen Prozess starten darf. Die Klasse ist eine Spezialisierung der Klasse <code>Katalogeintrag</code>.</p>
+<p>Dieser Katalog enthält die Information zur Zugangsberechtigung eines Themas. Die Zugangsberechtigung steuert den Zugriff auf die Daten des Themas und orientiert sich im Allgemeinen an den Angaben des Geobasisdatenkatalogs. Über die Angabe der Zugangsberechtigung wird gesteuert, in welches Verzeichnis ein Datensatz abgelegt wird. Öffentliche Daten gelangen nach <a href="https://data.geo.sz.ch/public/Themen/">data.geo.sz.ch</a>, geschützte hingegen in Ablageorte, welche unter Zugriffsschutz stehen. Die Klasse ist eine Spezialisierung der Klasse <code>Katalogeintrag</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -739,22 +736,43 @@ th {
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Beziehungsattribute</strong></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>todo</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rThema</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Referenz auf die gleiche Klasse, um Beziehungen zwischen Themen abzubilden.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Geometrie</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rStatus</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Referenz auf die Klasse <code>Status</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rZugangsberechtigung</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Referenz auf die Klasse <code>Zugangsberechtigung</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rBesitzer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Referenz auf die Klasse <code>Organisation</code>, welche auf die für ein Thema rechtlich zuständige Stelle verweist.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rBearbeiter</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Referenz auf die Klasse <code>Organisation</code>, welche auf die für die Datenbearbeitung zuständige Stelle verweist.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine Geometrie.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Bedingungen</strong></p></td>
@@ -781,7 +799,7 @@ th {
 <div class="sect3">
 <h4 id="_klasse_datenmodell"><a class="anchor" href="#_klasse_datenmodell"></a><a class="link" href="#_klasse_datenmodell">4.2.2. Klasse <code>Datenmodell</code></a></h4>
 <div class="paragraph">
-<p>Die Klasse <code>Datenmodell</code> führt die Angaben zum Datenmodell. Das Datenmodell wird einem Thema zugeordnet und kann über die Zeit in verschiedenen Versionen vorliegen.</p>
+<p>Die Klasse <code>Datenmodell</code> führt die Angaben zum Datenmodell. Das Datenmodell wird einem Thema zugeordnet und kann über die Zeit in verschiedenen Versionen vorliegen. Zur Kennzeichnung der Version werden die Buchstaben a,b und c in einer zyklischen Abfolge verwendet.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -872,22 +890,31 @@ th {
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Beziehungsattribute</strong></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>todo</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rDatenmodell</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Referenz auf die gleiche Klasse, um Beziehungen zwischen Datenmodellen abzubilden.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Geometrie</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rThema</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Referenz auf die Klasse <code>Thema</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine Geometrie.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Bedingungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine besonderen Bedingungen.</p></td>
 </tr>
 </tbody>
 </table>
@@ -959,49 +986,33 @@ th {
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Beziehungsattribute</strong></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>todo</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rDatenmodell</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Referenz auf die Klasse <code>Datenmodell</code>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Geometrie</strong></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine Geometrie.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Bedingungen</strong></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Bedingungen</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nummer</code></p></td>
-<td class="tableblock halign-left valign-top" colspan="3"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>Die Werte müssen innerhalb der Klasse eindeutig sein.</p>
-</li>
-<li>
-<p>Nach der Vergabe muss der Wert unverändert bleiben.</p>
-</li>
-<li>
-<p>Der tiefste Wert ist "A000". Danach werden die Nummern bis "A999" vergeben. Anschliessend geht es weiter mit "B000".</p>
-</li>
-</ul>
-</div></div></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine besonderen Bedingungen.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_themenereignis"><a class="anchor" href="#_klasse_themenereignis"></a><a class="link" href="#_klasse_themenereignis">4.2.4. Klasse <code>Themenereignis</code></a></h4>
+<h4 id="_klasse_ereignis"><a class="anchor" href="#_klasse_ereignis"></a><a class="link" href="#_klasse_ereignis">4.2.4. Klasse <code>Ereignis</code></a></h4>
 <div class="paragraph">
-<p>Die Klasse <code>Themenereignis</code> führt die Ereignisse, welche in Zusammenhang mt dem Thema stehen. Alle Angaben dienen der Historie eines Themas und sind intern.</p>
+<p>Die Klasse <code>Ereignis</code> führt die Ereignisse, welche in Zusammenhang mt dem Thema stehen. Alle Angaben dienen der Historie eines Themas und sind intern.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1053,12 +1064,6 @@ th {
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Datum</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Angabe des Datums, an dem das Ereignis stattfand.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2025-06-01</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Titel</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Titel, welcher das Ereignis beschreibt.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Erstfassung</p></td>
@@ -1071,41 +1076,25 @@ th {
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Beziehungsattribute</strong></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>todo</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rThema</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Referenz auf die Klasse <code>Thema</code>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Geometrie</strong></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine Geometrie.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Bedingungen</strong></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Bedingungen</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nummer</code></p></td>
-<td class="tableblock halign-left valign-top" colspan="3"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>Die Werte müssen innerhalb der Klasse eindeutig sein.</p>
-</li>
-<li>
-<p>Nach der Vergabe muss der Wert unverändert bleiben.</p>
-</li>
-<li>
-<p>Der tiefste Wert ist "A000". Danach werden die Nummern bis "A999" vergeben. Anschliessend geht es weiter mit "B000".</p>
-</li>
-</ul>
-</div></div></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine besonderen Bedingungen.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1183,149 +1172,30 @@ th {
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Beziehungsattribute</strong></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>todo</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine Beziehungsattribute.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Geometrie</strong></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine Geometrie.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Bedingungen</strong></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Bedingungen</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nummer</code></p></td>
-<td class="tableblock halign-left valign-top" colspan="3"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>Die Kombination aus <code>Stammnummer</code>, <code>Zusatzzahl</code> und <code>Suffix</code> muss eindeutig sein.</p>
-</li>
-</ul>
-</div></div></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine besonderen Bedingungen.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_information"><a class="anchor" href="#_klasse_information"></a><a class="link" href="#_klasse_information">4.2.6. Klasse <code>Information</code></a></h4>
+<h4 id="_klasse_organisation"><a class="anchor" href="#_klasse_organisation"></a><a class="link" href="#_klasse_organisation">4.2.6. Klasse <code>Organisation</code></a></h4>
 <div class="paragraph">
-<p>Die Klasse <code>Information</code> ermöglicht es, einem Thema zusätzliche Angaben hinzuzufügen. Alle Angaben dienen der Doumentation eines Themas und sind intern.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Beschreibung</th>
-<th class="tableblock halign-left valign-top">Beispiel</th>
-<th class="tableblock halign-left valign-top">Freigabe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Fachattribute</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Musterha</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1980-03-21T15:38:12</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Muelleran</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2024-07-30T08:07:57</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Titel</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Überschrift der Information</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Thema aufgehoben</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Text</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Erläuterung der Information</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Das Thema wurde durch den Bund aufgehoben.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Link</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">URL auf zusätzliche Informationen</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.zustz.info" class="bare">https://www.zustz.info</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Beziehungsattribute</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>todo</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Geometrie</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Bedingungen</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nummer</code></p></td>
-<td class="tableblock halign-left valign-top" colspan="3"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>Die Kombination aus <code>Stammnummer</code>, <code>Zusatzzahl</code> und <code>Suffix</code> muss eindeutig sein.</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_klasse_stelle"><a class="anchor" href="#_klasse_stelle"></a><a class="link" href="#_klasse_stelle">4.2.7. Klasse <code>Stelle</code></a></h4>
-<div class="paragraph">
-<p>Die Klasse <code>Stelle</code> führt die Angaben über die für ein Thema zuständigen Stelle.</p>
+<p>Die Klasse <code>Organisation</code> führt die Angaben über die für ein Thema zuständigen Stelle.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1389,419 +1259,30 @@ th {
 <td class="tableblock halign-left valign-top"><p class="tableblock">öffentlich</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Beziehungsattribute</strong></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>todo</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine Referenzen.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Geometrie</strong></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine Geometrie.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Bedingungen</strong></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Bedingungen</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nummer</code></p></td>
-<td class="tableblock halign-left valign-top" colspan="3"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>Die Kombination aus <code>Stammnummer</code>, <code>Zusatzzahl</code> und <code>Suffix</code> muss eindeutig sein.</p>
-</li>
-</ul>
-</div></div></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine besonderen Bedingungen.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_parameter"><a class="anchor" href="#_klasse_parameter"></a><a class="link" href="#_klasse_parameter">4.2.8. Klasse <code>Parameter</code></a></h4>
+<h4 id="_klasse_benutzer"><a class="anchor" href="#_klasse_benutzer"></a><a class="link" href="#_klasse_benutzer">4.2.7. Klasse <code>Benutzer</code></a></h4>
 <div class="paragraph">
-<p>Die Klasse <code>Parameter</code> führt die Information, welche für die Prozessierung benötigt werden. Alle Angaben sind intern.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Beschreibung</th>
-<th class="tableblock halign-left valign-top">Beispiel</th>
-<th class="tableblock halign-left valign-top">Freigabe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Fachattribute</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Musterha</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1980-03-21T15:38:12</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Muelleran</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2024-07-30T08:07:57</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name des Parameters</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datenmodell</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Beziehungsattribute</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>todo</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Geometrie</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Bedingungen</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nummer</code></p></td>
-<td class="tableblock halign-left valign-top" colspan="3"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>Die Kombination aus <code>Stammnummer</code>, <code>Zusatzzahl</code> und <code>Suffix</code> muss eindeutig sein.</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_klasse_wert"><a class="anchor" href="#_klasse_wert"></a><a class="link" href="#_klasse_wert">4.2.9. Klasse <code>Wert</code></a></h4>
-<div class="paragraph">
-<p>Die Klasse <code>Wert</code> führt die Werte der Parameter. Sie steuern die Prozessierung. Alle Angaben sind intern.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Beschreibung</th>
-<th class="tableblock halign-left valign-top">Beispiel</th>
-<th class="tableblock halign-left valign-top">Freigabe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Fachattribute</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Musterha</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1980-03-21T15:38:12</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Muelleran</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2024-07-30T08:07:57</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Text</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Wert des Parameters</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A201a</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Beziehungsattribute</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>todo</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Geometrie</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Bedingungen</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nummer</code></p></td>
-<td class="tableblock halign-left valign-top" colspan="3"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>Die Kombination aus <code>Stammnummer</code>, <code>Zusatzzahl</code> und <code>Suffix</code> muss eindeutig sein.</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_klasse_prozess"><a class="anchor" href="#_klasse_prozess"></a><a class="link" href="#_klasse_prozess">4.2.10. Klasse <code>Prozess</code></a></h4>
-<div class="paragraph">
-<p>Die Klasse <code>Prozess</code> enthält die Information über einen Prozess. Alle Angaben sind intern.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Beschreibung</th>
-<th class="tableblock halign-left valign-top">Beispiel</th>
-<th class="tableblock halign-left valign-top">Freigabe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Fachattribute</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Musterha</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1980-03-21T15:38:12</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Muelleran</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2024-07-30T08:07:57</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Name</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name des Prozeses</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datenexport Produktion</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Beziehungsattribute</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>todo</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Geometrie</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Bedingungen</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Nummer</code></p></td>
-<td class="tableblock halign-left valign-top" colspan="3"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>Die Kombination aus <code>Stammnummer</code>, <code>Zusatzzahl</code> und <code>Suffix</code> muss eindeutig sein.</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_klasse_werkzeug"><a class="anchor" href="#_klasse_werkzeug"></a><a class="link" href="#_klasse_werkzeug">4.2.11. Klasse <code>Werkzeug</code></a></h4>
-<div class="paragraph">
-<p>Die Klasse <code>Werkzeug</code> enthält die Information über die eingesetzten Werkzeuge. Alle Angaben sind intern.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Beschreibung</th>
-<th class="tableblock halign-left valign-top">Beispiel</th>
-<th class="tableblock halign-left valign-top">Freigabe</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Fachattribute</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Musterha</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1980-03-21T15:38:12</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Muelleran</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2024-07-30T08:07:57</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Bezeichnung</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bezeichnung des Werkzeuges</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ili2pg_export</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Beziehungsattribute</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>todo</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Geometrie</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Bedingungen</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kennung</code></p></td>
-<td class="tableblock halign-left valign-top" colspan="3"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>Der Wert muss mit 'user_full_name' von QGIS übereinstimmen.</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_klasse_benutzer"><a class="anchor" href="#_klasse_benutzer"></a><a class="link" href="#_klasse_benutzer">4.2.12. Klasse <code>Benutzer</code></a></h4>
-<div class="paragraph">
-<p>Die Klasse <code>Benutzer</code> führt die Informationen der Benutzer, welche Prozesse ausführen können. Die Angaben werden benötigt, um Daten aus QGIS im WebGIS aktualisieren zu können. Alle Angaben dienen der Doumentation eines Themas und sind intern.</p>
+<p>Die Klasse <code>Benutzer</code> führt die Informationen der Benutzer, welche Prozesse ausführen können. Die Angaben werden benötigt, um Daten aus QGIS im WebGIS aktualisieren zu können. Alle Angaben dienen der Dokumentation eines Themas und sind intern.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1877,32 +1358,26 @@ th {
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Beziehungsattribute</strong></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>todo</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine Referenzen.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Geometrie</strong></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine Geometrie.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Bedingungen</strong></p></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Bedingungen</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kennung</code></p></td>
 <td class="tableblock halign-left valign-top" colspan="3"><div class="content"><div class="ulist">
 <ul>
 <li>
-<p>Der Wert muss mit 'user_full_name' von QGIS übereinstimmen.</p>
+<p>Die Werte müssen innerhalb der Klasse eindeutig sein.</p>
 </li>
 </ul>
 </div></div></td>
@@ -1911,9 +1386,171 @@ th {
 </table>
 </div>
 <div class="sect3">
-<h4 id="_klasse_prozesslog"><a class="anchor" href="#_klasse_prozesslog"></a><a class="link" href="#_klasse_prozesslog">4.2.13. Klasse <code>Prozesslog</code></a></h4>
+<h4 id="_klasse_thema_benutzer"><a class="anchor" href="#_klasse_thema_benutzer"></a><a class="link" href="#_klasse_thema_benutzer">4.2.8. Klasse <code>Thema__Benutzer</code></a></h4>
 <div class="paragraph">
-<p>Die Klasse <code>Prozesslog</code> führt die Informationen zu den Prozessen. Alle Angaben dienen der Doumentation eines Themas und sind intern.</p>
+<p>Die Klasse <code>Thema__Benutzer</code> ist eine Beziehungsklasse und wird für die Datenpublikation aus QGIS benötigt. Sie löst die n:m-Beziehung zwischen den Klassen `Thema`und `Benutzer`auf und enthält ihrerseits Attribute. Alle Angaben dienen der Dokumentation eines Themas und sind intern.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Fachattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RechtFuerTest</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Angabe, ob ein Benutzer ein konkretes Thema auf die Stufe "Test" publizieren darf.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TRUE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RechtFuerProduktion</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Angabe, ob ein Benutzer ein konkretes Thema auf die Stufe "Produktion" publizieren darf.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FALSE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rThema</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Referenz auf die Klasse <code>Thema</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rBenutzer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Referenz auf die Klasse <code>Benutzer</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine Geometrie.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Bedingungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine besonderen Bedingungen.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_prozessparameter"><a class="anchor" href="#_klasse_prozessparameter"></a><a class="link" href="#_klasse_prozessparameter">4.2.9. Klasse <code>Prozessparameter</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Prozessparameter</code> ist eine Beziehungsklasse, welche ausmodelliert wurde. Sie beinhaltet alle für einen bestimmten Prozess benötigten Parameter und ordnet diese dem Thema zu. Alle Angaben dienen der Dokumentation eines Themas und sind intern.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Beispiel</th>
+<th class="tableblock halign-left valign-top">Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Fachattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>OID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">technischer Objektidentifikator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ceaa37a9-8614-43fc-9a8b-688f95c30218</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Musterha</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>erfasstAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1980-03-21T15:38:12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertVon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Muelleran</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geaendertAm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-07-30T08:07:57</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Wert</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wert, welcher für den betreffenden Parameter zur Anwendung kommt (z.B. der Name der Datenbank).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a123</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rProzess</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Referenz auf die Klasse <code>Prozess</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rParameter</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Referenz auf die Klasse <code>Parameter</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rThema</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Referenz auf die Klasse <code>Thema</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine Geometrie.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Bedingungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine besonderen Bedingungen.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_klasse_prozesslog"><a class="anchor" href="#_klasse_prozesslog"></a><a class="link" href="#_klasse_prozesslog">4.2.10. Klasse <code>Prozesslog</code></a></h4>
+<div class="paragraph">
+<p>Die Klasse <code>Prozesslog</code> führt die Log-Informationen zu den Prozessen, welche nach Abschluss eines Prozessschrittes geschrieben werden. Um die Fehleranfälligkeit zu verringern, wurde die Klasse ohne Beziehungen modelliert. Dies, obwohl sich einige Attribute dafür geeignet hätten (z.B. eine Beziehung auf die Klasse `Benutzer`). Alle Angaben dienen der Dokumentation eines Themas und sind intern.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1942,7 +1579,7 @@ th {
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>angestossenVon</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Name der Person, welche den Prozess angestossen hat.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name der Person, welche den Prozess angestossen hat. Entspricht dem Wert aus <code>Benutzer.Kennung</code>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Anna Muster</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
 </tr>
@@ -1953,47 +1590,52 @@ th {
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Ausfuehrungszeitpunkt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Zeitpunkt</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Zeitstempel, an dem der Prozess gestartet wurde.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2024-07-30T08:07:57</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Befehl</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Befehl, mit dem der Prozess angestossen wurde.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;keine Angabe&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Prozessschritt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name des Schrittes, welcher zum Zeitpunkt `Zeitpunkt` abgeschlossen wurde. Im Normalfall entspricht der Wert dem Namen des FME-Workspaces, welcher den Schritt ausführt.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initialisierung.fmw</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Beziehungsattribute</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>todo</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">todo</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ccee2bad-419e-454e-9e0f-9ef2ae2d4d44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Stufe</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stufe, auf welcher ein Prozess ausgeführt wird. Als Stufen kommen in Frage: "Test" und "Produktion".</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Produktion</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Geometrie</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Geometrie</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Geometrie des Objektes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">(ohne Beispiel)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Statuscode</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code des Status, welcher am Ende eines Prozessschrittes resultiert. Mögliche Werte sind: 0, 1, 2, 3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">todo <strong>Bedingungen</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Statustext</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beschreibung zum Statuscode. Es gilt: "fehlerfrei" für den Statuscode 0; "Ausführung fehlgeschlagen" für den Statuscode 1; "keine Berechtigung vorhanden" für den Statuscode 2 und "temporäre Sperre aufgrund zu vieler Zugriffe" für den Statuscode 3.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fehlerfrei</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span style="color:red;">intern</span></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Kennung</code></p></td>
-<td class="tableblock halign-left valign-top" colspan="3"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>Der Wert muss mit 'user_full_name' von QGIS übereinstimmen.</p>
-</li>
-</ul>
-</div></div></td>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Beziehungsattribute</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine Beziehungsattribute.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Geometrie</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine Geometrie.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock"><strong>Bedingungen</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="4"><p class="tableblock">Die Klasse verfügt über keine besonderen Bedingungen.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2004,7 +1646,7 @@ th {
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-08-08 11:34:13 UTC
+Last updated 2025-08-21 14:15:08 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
