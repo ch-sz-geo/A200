@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ili:transfer
+ xmlns:ili="http://www.interlis.ch/xtf/2.4/INTERLIS"
+ xmlns:geom="http://www.interlis.ch/geometry/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:Units="http://www.interlis.ch/xtf/2.4/Units"
+ xmlns:SZ_Themenverwaltung_V2="http://www.interlis.ch/xtf/2.4/SZ_Themenverwaltung_V2">
+<ili:headersection>
+  <ili:models>
+   <ili:model>SZ_Themenverwaltung_V2</ili:model>
+  </ili:models>
+  <ili:sender>AGI SZ: FME, Python</ili:sender>
+ </ili:headersection>
+<ili:datasection>
+<SZ_Themenverwaltung_V2:Stammdaten ili:bid="SZ_Themenverwaltung_V2.Stammdaten.2025-08-22">
+    <SZ_Themenverwaltung_V2:Parameter ili:tid="c6ebe52b-c05e-48c7-8b92-102a6122e7d9"><SZ_Themenverwaltung_V2:Code>Datenbank</SZ_Themenverwaltung_V2:Code><SZ_Themenverwaltung_V2:Name>Datenbank</SZ_Themenverwaltung_V2:Name><SZ_Themenverwaltung_V2:SortierNr>1</SZ_Themenverwaltung_V2:SortierNr><SZ_Themenverwaltung_V2:Bemerkung>Datenbankname</SZ_Themenverwaltung_V2:Bemerkung></SZ_Themenverwaltung_V2:Parameter>
+    <SZ_Themenverwaltung_V2:Parameter ili:tid="5e744e3c-3124-4b10-8bcb-1e42250f2d87"><SZ_Themenverwaltung_V2:Code>Schema</SZ_Themenverwaltung_V2:Code><SZ_Themenverwaltung_V2:Name>Schema</SZ_Themenverwaltung_V2:Name><SZ_Themenverwaltung_V2:SortierNr>2</SZ_Themenverwaltung_V2:SortierNr><SZ_Themenverwaltung_V2:Bemerkung>Schemaname</SZ_Themenverwaltung_V2:Bemerkung></SZ_Themenverwaltung_V2:Parameter>
+    <SZ_Themenverwaltung_V2:Parameter ili:tid="81fbfdbb-72d9-4d56-90f7-651ef6b576c5"><SZ_Themenverwaltung_V2:Code>Datenmodell</SZ_Themenverwaltung_V2:Code><SZ_Themenverwaltung_V2:Name>Datenmodell</SZ_Themenverwaltung_V2:Name><SZ_Themenverwaltung_V2:SortierNr>3</SZ_Themenverwaltung_V2:SortierNr><SZ_Themenverwaltung_V2:Bemerkung>Name des Datenmodells</SZ_Themenverwaltung_V2:Bemerkung></SZ_Themenverwaltung_V2:Parameter>
+    <SZ_Themenverwaltung_V2:Parameter ili:tid="f8cb8a40-9bd2-4302-8ddc-80d234c789ec"><SZ_Themenverwaltung_V2:Code>Automation_ID</SZ_Themenverwaltung_V2:Code><SZ_Themenverwaltung_V2:Name>Automation-ID</SZ_Themenverwaltung_V2:Name><SZ_Themenverwaltung_V2:SortierNr>4</SZ_Themenverwaltung_V2:SortierNr><SZ_Themenverwaltung_V2:Bemerkung>ID der Automation auf FME-Flow</SZ_Themenverwaltung_V2:Bemerkung></SZ_Themenverwaltung_V2:Parameter>
+    <SZ_Themenverwaltung_V2:Prozess ili:tid="fea21de0-f037-49f0-8309-8322c005bcc8"><SZ_Themenverwaltung_V2:Code>ili2pg_export</SZ_Themenverwaltung_V2:Code><SZ_Themenverwaltung_V2:Name>ili2pg-Export</SZ_Themenverwaltung_V2:Name><SZ_Themenverwaltung_V2:SortierNr>1</SZ_Themenverwaltung_V2:SortierNr><SZ_Themenverwaltung_V2:Bemerkung>Prozess, über den mit dem Werkzeug ili2pg Daten exportiert werden</SZ_Themenverwaltung_V2:Bemerkung></SZ_Themenverwaltung_V2:Prozess>
+    <SZ_Themenverwaltung_V2:Prozess ili:tid="629ce0ea-fa86-4230-90aa-718ef2109452"><SZ_Themenverwaltung_V2:Code>ili2pg_import</SZ_Themenverwaltung_V2:Code><SZ_Themenverwaltung_V2:Name>ili2pg-Import</SZ_Themenverwaltung_V2:Name><SZ_Themenverwaltung_V2:SortierNr>2</SZ_Themenverwaltung_V2:SortierNr><SZ_Themenverwaltung_V2:Bemerkung>Prozess, über den mit dem Werkzeug ili2pg Daten importiert werden</SZ_Themenverwaltung_V2:Bemerkung></SZ_Themenverwaltung_V2:Prozess>
+    <SZ_Themenverwaltung_V2:Prozess ili:tid="57712982-70fe-4b35-ac1f-d81c8d54423a"><SZ_Themenverwaltung_V2:Code>fme_publikation</SZ_Themenverwaltung_V2:Code><SZ_Themenverwaltung_V2:Name>FME-Publikation</SZ_Themenverwaltung_V2:Name><SZ_Themenverwaltung_V2:SortierNr>3</SZ_Themenverwaltung_V2:SortierNr><SZ_Themenverwaltung_V2:Bemerkung>Prozess, über den mit dem Werkzeug FME Daten von QGIS ins Web publiziert werden</SZ_Themenverwaltung_V2:Bemerkung></SZ_Themenverwaltung_V2:Prozess>
+    <SZ_Themenverwaltung_V2:Status ili:tid="762a5438-de40-4e11-8951-d98ec91c5fe6"><SZ_Themenverwaltung_V2:Code>aktiv</SZ_Themenverwaltung_V2:Code><SZ_Themenverwaltung_V2:Name>aktiv</SZ_Themenverwaltung_V2:Name><SZ_Themenverwaltung_V2:SortierNr>1</SZ_Themenverwaltung_V2:SortierNr><SZ_Themenverwaltung_V2:Bemerkung>Das Thema ist aktiv</SZ_Themenverwaltung_V2:Bemerkung></SZ_Themenverwaltung_V2:Status>
+    <SZ_Themenverwaltung_V2:Status ili:tid="375d95c0-5827-4628-a7e7-4064b9837f35"><SZ_Themenverwaltung_V2:Code>inaktiv</SZ_Themenverwaltung_V2:Code><SZ_Themenverwaltung_V2:Name>inaktiv</SZ_Themenverwaltung_V2:Name><SZ_Themenverwaltung_V2:SortierNr>2</SZ_Themenverwaltung_V2:SortierNr><SZ_Themenverwaltung_V2:Bemerkung>Das Thema ist inaktiv</SZ_Themenverwaltung_V2:Bemerkung></SZ_Themenverwaltung_V2:Status>
+    <SZ_Themenverwaltung_V2:Zugangsberechtigung ili:tid="1b858ea8-d79d-4ebb-b049-3c25a9a595f1"><SZ_Themenverwaltung_V2:Code>A</SZ_Themenverwaltung_V2:Code><SZ_Themenverwaltung_V2:Name>öffentlich</SZ_Themenverwaltung_V2:Name><SZ_Themenverwaltung_V2:SortierNr>1</SZ_Themenverwaltung_V2:SortierNr><SZ_Themenverwaltung_V2:Bemerkung>Datensatz ist öffentlich</SZ_Themenverwaltung_V2:Bemerkung></SZ_Themenverwaltung_V2:Zugangsberechtigung>
+    <SZ_Themenverwaltung_V2:Zugangsberechtigung ili:tid="daf9567b-4622-4e13-8ebb-9f0d1dc268a2"><SZ_Themenverwaltung_V2:Code>B</SZ_Themenverwaltung_V2:Code><SZ_Themenverwaltung_V2:Name>geschützt</SZ_Themenverwaltung_V2:Name><SZ_Themenverwaltung_V2:SortierNr>2</SZ_Themenverwaltung_V2:SortierNr><SZ_Themenverwaltung_V2:Bemerkung>Der Datensatz ist geschützt und nur für eine bestimmte Gruppe zugänglich</SZ_Themenverwaltung_V2:Bemerkung></SZ_Themenverwaltung_V2:Zugangsberechtigung>
+    <SZ_Themenverwaltung_V2:Zugangsberechtigung ili:tid="8d051ae2-f324-4460-bac5-e79411c94b34"><SZ_Themenverwaltung_V2:Code>C</SZ_Themenverwaltung_V2:Code><SZ_Themenverwaltung_V2:Name>geheim</SZ_Themenverwaltung_V2:Name><SZ_Themenverwaltung_V2:SortierNr>3</SZ_Themenverwaltung_V2:SortierNr><SZ_Themenverwaltung_V2:Bemerkung>Der Datensatz ist geheim und nur für die zuständige Stelle einsehbar</SZ_Themenverwaltung_V2:Bemerkung></SZ_Themenverwaltung_V2:Zugangsberechtigung>
+  </SZ_Themenverwaltung_V2:Stammdaten>
+ </ili:datasection>
+</ili:transfer>
