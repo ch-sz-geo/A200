@@ -444,6 +444,14 @@ m| Kennung
 | eindeutige Kennung des Benutzers; weitere Hinweise siehe unten
 | AnnaMuster
 | +++<span style="color:red;">intern</span>+++
+m| Vorname
+| Vorname des Benutzers
+| Anna
+| +++<span style="color:red;">intern</span>+++
+m| Nachname
+| Nachname des Benutzers
+| Muster
+| +++<span style="color:red;">intern</span>+++
 m| E_Mail
 | E-Mail-Adresse des Benutzers, damit dieser automatisch benachrichtigt werden kann.
 | anna.muster@domain.com
