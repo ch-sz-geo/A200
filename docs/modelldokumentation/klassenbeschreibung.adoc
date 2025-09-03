@@ -553,7 +553,7 @@ m| rThema
 4+| *Geometrie*
 4+| Die Klasse verfügt über keine Geometrie.
 4+| *Bedingungen*
-4+| Die Klasse verfügt über keine besonderen Bedingungen.
+4+| Jeder Prozess umfasst eine bestimmte Anzahl Parameter. Es ist darauf zu achten, dass die Parameter pro Prozess nur einmal erfasst werden. Zum Beispiel darf der Paramter "Datenbank" im Prozess "ili2pg_export" nur einmal erfasst werden.
 |===
 
 ==== Klasse `+Prozesslog+`
