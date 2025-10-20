@@ -477,7 +477,7 @@ m|Kennung
 Über den 'user_account_name' ist jeder Benutzer eindeutig bestimmt. Zum Zweck der E-Mail-Benachrichtigung wird zusätzlich der 'user_full_name' ausgelesen, über den die E-Mail-Adresse zusammengesetzt und im Fehlerfall versendet wird. Dies jedoch nur dann, falls der Benutzer nicht auf dieser Klasse eingetragen ist.
 
 ==== Klasse `+Thema__Benutzer+`
-Die Klasse `+Thema__Benutzer+` ist eine Beziehungsklasse und wird für die Datenpublikation aus QGIS benötigt. Sie löst die n:m-Beziehung zwischen den Klassen `+Thema+`und `+Benutzer+`auf und enthält ihrerseits Attribute. Alle Angaben dienen der Dokumentation eines Themas und sind intern.
+Die Klasse `+Thema__Benutzer+` ist eine Beziehungsklasse und wird für die Datenpublikation aus QGIS benötigt. Sie löst die n:m-Beziehung zwischen den Klassen `+Thema+` und `+Benutzer+` auf und enthält ihrerseits Attribute. Alle Angaben dienen der Dokumentation eines Themas und sind intern.
 
 [cols=4*,options="header"]
 |===
